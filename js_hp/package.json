@@ -1,0 +1,19 @@
+{
+  "name": "devlopement",
+  "version": "1.0.0",
+  "description": "This is an exercise to briefly practice the three pillars of JS: Types / Coercion, Scope / Closures, and `this` / Prototypes.",
+  "main": "async.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "fetch": "^1.1.0",
+    "node-fetch": "^3.2.4"
+  }
+}
