@@ -3,17 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML5 Canvas</title>
+  <script src="https://kit.fontawesome.com/da5e55aecd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<canvas id="draw" width="800" height="800"></canvas>
+<div class="container">
+  <div class="input_area">
+      <label for="color">color</label>
+    <input type="color" name="color_input" id="color">
+      <label for="range">line width</label>
+    <input type="range" name="range_input" id="range">
+    <button class="clear">clear</button>
+    <button class="regular">regular</button>
+    <button class="round">round</button>
+  </div>
+  <canvas id="draw" width="800" height="500"></canvas>
+</div>
 <script>
 </script>
 
 <style>
   html, body {
     margin: 0;
+    background: #5614B0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DBD65C, #5614B0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DBD65C, #5614B0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .input-area 
+  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+  }
+  label
+  {
+    float: top;
+    color: white;
+  }
+  button 
+  {
+    border: 0;
+    border-radius:5px;
+    width: 70px;
+    height: 30px;
+    margin: 0 5px;
+    background-color: #1363DF;
+    color: white;
+    margin-bottom: 8px;
+  }
+  .fa-solid {
+    color: white;
+    border: red;
+  }
+  button:hover 
+  {
+    background-color: #1F4690;
+  }
+  input[type=color]
+  {
+    width: 40px;
+  }
+  .container 
+  {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #draw 
+  {
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius:15px;
   }
 </style>
-
+<script src="script08.js"></script>
 </body>
 </html>
