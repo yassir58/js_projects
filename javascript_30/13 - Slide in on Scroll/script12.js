@@ -8,7 +8,21 @@ window.addEventListener ('scroll', (e)=>
 
 function eventHandler (e)
 {
-    console.dir (window.scrollY);
+    let minHeight;
+    let maxHeight;
+    let scroll;
+
+    minHeight = offsetY (images[0]) + (images[0].clientHeight / 2);
+    maxHeight = offsetY (images[0]) + (images[0].clientHeight * 2);
+    scroll = window.innerHeight + window.scrollY;
+    images.forEach (img=>{
+        if (scroll > minHeight && scroll < maxHeight)
+            console.log (img);
+            //img.classList.add ('active');
+        /*else    
+            img.classList.remove ('active');*/
+    });
+   
 }
 
 function debounce (delay)
@@ -22,4 +36,11 @@ function debounce (delay)
 }
 
 
-const debounceHandler = debounce (1000);
+function offsetY(elm)
+{
+    const rect =  elm.getBoundingClientRect ();
+    return (rect.top + window.scrollY);
+}
+
+
+const debounceHandler = debounce (500);
